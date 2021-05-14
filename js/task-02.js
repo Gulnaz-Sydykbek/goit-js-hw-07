@@ -21,7 +21,7 @@ ingredients.forEach(ingredient => {
 
 //=======================================================
 
-const ingredients = [
+/*const ingredients = [
   'Картошка',
   'Грибы',
   'Чеснок',
@@ -37,4 +37,27 @@ ingredients.forEach(ingredient => {
 
   itemsForIngredientsEl.textContent = ingredient;
   containerForIngredientsEl.appendChild(itemsForIngredientsEl);
+});*/
+
+//=======================================================
+
+const ingredients = [
+  'Картошка',
+  'Грибы',
+  'Чеснок',
+  'Помидоры',
+  'Зелень',
+  'Приправы',
+];
+
+const containerForIngredientsEl = document.querySelector('ul#ingredients');
+var fragment = document.createDocumentFragment();
+
+const makeItemsForIngredientsEl = ingredients.map(ingredient => {
+  const itemsForIngredientsEl = document.createElement('li');
+
+  itemsForIngredientsEl.textContent = ingredient;
+  return fragment.appendChild(itemsForIngredientsEl);
 });
+
+containerForIngredientsEl.append(...makeItemsForIngredientsEl);

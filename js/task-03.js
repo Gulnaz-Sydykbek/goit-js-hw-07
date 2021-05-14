@@ -72,8 +72,9 @@ const galleryContainerEl = document.querySelector('ul#gallery');
 
 const makeListGallery = (pictures) => {
   return pictures.map(picture => {
+    console.log(`<li class="items-img"><img src="${picture.url}" alt="${picture.alt}" width = 400 height = 330 /></li>`);
     return `<li class="items-img"><img src="${picture.url}" alt="${picture.alt}" width = 400 height = 330 /></li>`;
-  });
+  }).join(' ');
 };
 
 const imgGallery = makeListGallery(images);

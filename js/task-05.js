@@ -20,7 +20,8 @@ const refs = {
 
 const onInputChange = (event) => {
   if (refs.nameInput.textContent = event.currentTarget.value === '') {
-    return refs.nameOutput.textContent = 'незнакомец';
+    refs.nameOutput.textContent = 'незнакомец';
+    return;
   }
 
   refs.nameOutput.textContent = event.currentTarget.value;

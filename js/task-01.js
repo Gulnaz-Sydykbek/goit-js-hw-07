@@ -54,11 +54,20 @@ console.log(makeMessage([...elem]));*/
 
 //=======================================================
 
-const totalItemsEl = document.querySelectorAll('ul#categories .item');
+/*const totalItemsEl = document.querySelectorAll('ul#categories .item');
 console.log(`В списке ${totalItemsEl.length} категории.`);
 
 const totalCountCategories = [...totalItemsEl].map(category => {
   return `\nКатегория: ${category.firstElementChild.textContent}\nКоличество элементов: ${category.lastElementChild.children.length}`;
   });
 
-console.log(...totalCountCategories);
+console.log(...totalCountCategories);*/
+
+//=======================================================
+
+const totalItemsEl = document.querySelectorAll('ul#categories .item');
+console.log(`В списке ${totalItemsEl.length} категории.`);
+
+totalItemsEl.forEach(category => {
+  console.log(`\nКатегория: ${category.firstElementChild.textContent}\nКоличество элементов: ${category.lastElementChild.children.length}`);
+});
