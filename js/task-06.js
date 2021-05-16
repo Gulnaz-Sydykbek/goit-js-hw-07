@@ -69,8 +69,8 @@ const onInputChange = () => {
     validationInputEl.classList.remove('invalid');
     validationInputEl.classList.add('valid');
   } else {
-    validationInputEl.classList.add('invalid');
     validationInputEl.classList.remove('valid');
+    validationInputEl.classList.add('invalid');
   }
 }
 
