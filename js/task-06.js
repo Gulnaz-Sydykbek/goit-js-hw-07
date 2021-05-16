@@ -68,7 +68,10 @@ const onInputChange = () => {
   } else if (validationInputEl.value.length === totalLenght) {
     validationInputEl.classList.remove('invalid');
     validationInputEl.classList.add('valid');
-  } 
+  } else {
+    validationInputEl.classList.remove('valid');
+    validationInputEl.classList.add('invalid');
+  }
 }
 
 validationInputEl.addEventListener('change', onInputChange);
